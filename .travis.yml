@@ -1,0 +1,6 @@
+language: cpp
+compiler:
+ - clang
+ - gcc
+script: "make && ./bitarray_test2.exe && ./bitarray_test.exe"
+
