@@ -5,6 +5,8 @@ a bit array/vector/deque class in C++
 
 [![Continuous Integration status](https://secure.travis-ci.org/sebbu2/bitarray.png)](http://travis-ci.org/sebbu2/bitarray)
 
+[![Build Status](https://drone.io/github.com/sebbu2/bitarray/status.png)](https://drone.io/github.com/sebbu2/bitarray/latest)
+
 DETAILS
 =======
 
