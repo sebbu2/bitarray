@@ -7,7 +7,7 @@
 #include <cerrno>
 #include "bitarray.hpp"
 
-unsigned int next_multiple_8(unsigned int i) {
+inline unsigned int next_multiple_8(unsigned int i) {
 	if(i>8) return 8+next_multiple_8(i-8);
 	else if(i>0) {
 		return 8;
@@ -18,7 +18,7 @@ unsigned int next_multiple_8(unsigned int i) {
 	else throw "error";
 }
 
-unsigned char get_l(unsigned char i) {
+inline unsigned char get_l(unsigned char i) {
 	assert(i<=8);
 	unsigned char res=0x00;
 	if(i==0) return res;
@@ -30,7 +30,7 @@ unsigned char get_l(unsigned char i) {
 	return res;
 }
 
-unsigned char get_r(unsigned char i) {
+inline unsigned char get_r(unsigned char i) {
 	assert(i<=8);
 	unsigned char res=0x00;
 	if(i==0) return res;
@@ -41,11 +41,11 @@ unsigned char get_r(unsigned char i) {
 	return res;
 }
 
-unsigned char get_l(unsigned char i, unsigned char c) {
+inline unsigned char get_l(unsigned char i, unsigned char c) {
 	return (get_l(i)&c);
 }
 
-unsigned char get_r(unsigned char i, unsigned char c) {
+inline unsigned char get_r(unsigned char i, unsigned char c) {
 	return (get_r(i)&c);
 }
 
