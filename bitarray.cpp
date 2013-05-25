@@ -137,7 +137,7 @@ bitarray& bitarray::operator=(const bitarray &b) {
 	return (*this);
 }
 
-int bitarray::cmp(const bitarray &b) {
+int bitarray::cmp(const bitarray &b) const {
 	if(size<b.size) return -1;
 	else if(size>b.size) return 1;
 	for(unsigned int i=0;i<size;++i) {
@@ -243,27 +243,27 @@ void bitarray::forceBit(unsigned int i, bool b) {
 	data[i/8]|=b<<(7-i%8);//put the 1 if b==1
 }
 
-bool bitarray::operator< (const bitarray &b) {
+bool bitarray::operator< (const bitarray &b) const {
 	return cmp(b)<0;
 }
 
-bool bitarray::operator<=(const bitarray &b) {
+bool bitarray::operator<=(const bitarray &b) const {
 	return cmp(b)<=0;
 }
 
-bool bitarray::operator==(const bitarray &b) {
+bool bitarray::operator==(const bitarray &b) const {
 	return cmp(b)==0;
 }
 
-bool bitarray::operator!=(const bitarray &b) {
+bool bitarray::operator!=(const bitarray &b) const {
 	return cmp(b)!=0;
 }
 
-bool bitarray::operator> (const bitarray &b) {
+bool bitarray::operator> (const bitarray &b) const {
 	return cmp(b)>0;
 }
 
-bool bitarray::operator>=(const bitarray &b) {
+bool bitarray::operator>=(const bitarray &b) const {
 	return cmp(b)>=0;
 }
 

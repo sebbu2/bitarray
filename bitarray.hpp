@@ -37,7 +37,7 @@ class bitarray {
 private:
 	unsigned char* data;
 	unsigned int size;
-	int cmp(const bitarray &b);
+	int cmp(const bitarray &b) const;
 public:
 	bitarray();
 	bitarray(unsigned int s);
@@ -55,12 +55,12 @@ public:
 	void flipBit(unsigned int i);
 	void forceBit(unsigned int i, bool b);
 	//comparaison
-	bool operator< (const bitarray &b);
-	bool operator<=(const bitarray &b);
-	bool operator==(const bitarray &b);
-	bool operator!=(const bitarray &b);
-	bool operator> (const bitarray &b);
-	bool operator>=(const bitarray &b);
+	bool operator< (const bitarray &b) const;
+	bool operator<=(const bitarray &b) const;
+	bool operator==(const bitarray &b) const;
+	bool operator!=(const bitarray &b) const;
+	bool operator> (const bitarray &b) const;
+	bool operator>=(const bitarray &b) const;
 	//other operators
 	bitarray& operator<<=(unsigned int i);
 	bitarray& operator>>=(unsigned int i);
