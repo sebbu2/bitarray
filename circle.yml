@@ -1,0 +1,8 @@
+machine:
+  g++:
+    version: 4.6.3-1ubuntu5
+test:
+  override:
+    - make
+    - ./bitarray_test2.exe
+    - ./bitarray_test.exe
