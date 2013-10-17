@@ -7,6 +7,8 @@ a bit array/vector/deque class in C++
 
 [![Build Status](https://drone.io/github.com/sebbu2/bitarray/status.png)](https://drone.io/github.com/sebbu2/bitarray/latest)
 
+[![Circle CI](https://circleci.com/gh/sebbu2/bitarray.png?style=badge)](https://circleci.com/gh/sebbu2/bitarray)
+
 DETAILS
 =======
 
